@@ -9,9 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "exam02.GetController", urlPatterns = "/exam02/GetController")
 public class GetController extends HttpServlet {
+	//클라이언트가 get방식으로 요청할 때마다 콜백
+	//역할: 요청 처리
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.getRequestDispatcher("/WEB-INF/views/exam02/get.jsp").forward(request, response);
 	}
-
 }
