@@ -15,7 +15,7 @@ public class HomeController extends HttpServlet {
 	//역할: 요청 처리
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("service() 실행");
+		System.out.println("HomeController.service() 실행");
 		
 		//JSP로 이동
 		request.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);

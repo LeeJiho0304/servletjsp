@@ -1,4 +1,4 @@
-package servlet.exam04;
+package servlet.exam05;
 
 import java.io.IOException;
 
@@ -9,18 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name="exam04.ContentController", urlPatterns="/exam04/ContentController")
-public class ContentController extends HttpServlet {
+@WebServlet(name="exam05.RequestParamInfoController", urlPatterns="/exam05/RequestParamInfoController")
+public class RequestParamInfoController extends HttpServlet {
 	
-	//클라이언트가 요청할때마다 실행
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/exam04/content.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/exam05/requestParamInfo.jsp").forward(request, response);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("exam04.ContentController.doPost() 실행");
-		response.sendRedirect("/servletjsp/HomeController");
+		request.getRequestDispatcher("/WEB-INF/views/exam05/requestParamInfo.jsp").forward(request, response);
 	}
 }
