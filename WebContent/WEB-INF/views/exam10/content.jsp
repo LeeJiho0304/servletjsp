@@ -7,11 +7,9 @@
 		content.jsp
 	</div>
 	<div class="card-body">
-		<form method="post" action="${pageContext.request.contextPath}/exam03/ContentController">
-			<input type="text" name="param1" value="홍길동" /> <br>
-			<input type="submit" value="Form으로 제출" class="btn btn-info btn-sm"/>
-		</form>
-	</div>
+		<a href="${pageContext.request.contextPath}/exam10/ExceptionHandlingController" class="btn btn-info btn-sm">try-catch이용</a>
+    	<a href="${pageContext.request.contextPath}/exam10/NoExceptionHandlingController" class="btn btn-info btn-sm">web.xml</a>
+ 	</div>
 </div>
 
 <%@ include file="/WEB-INF/views/common/footer.jsp" %>
