@@ -77,4 +77,18 @@
 			<a class="text-white" href="${pageContext.request.contextPath}/exam11/ContentController">EL</a>
 		</h6>
 	</li>
+	
+	<li class="nav-item mb-2">
+		<h6 class="text-white">
+			<span class="mr-2">Exam12.</span>
+			<a class="text-white" href="${pageContext.request.contextPath}/exam12/ContentController">JSTL</a>
+		</h6>
+	</li>
+	
+	<li class="nav-item mb-2">
+		<h6 class="text-white">
+			<span class="mr-2">Exam13.</span>
+			<a class="text-white" href="${pageContext.request.contextPath}/exam13/ContentController">게시판</a>
+		</h6>
+	</li>
 </ul>
