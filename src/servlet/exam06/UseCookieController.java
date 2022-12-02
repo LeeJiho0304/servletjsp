@@ -18,7 +18,7 @@ public class UseCookieController extends HttpServlet {
 		Cookie[] cookies = request.getCookies();
 		
 		for(Cookie cookie : cookies) {
-			//쿠키 이름 읽ㄱ 
+			//쿠키 이름 읽기
 			String name = cookie.getName();
 			if(name.equals("useremail")) {
 				String value = cookie.getValue();
