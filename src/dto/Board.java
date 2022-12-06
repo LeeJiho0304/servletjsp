@@ -11,6 +11,7 @@ public class Board {
 	private String bcontent;
 	private String bwriter;
 	private Date bdate;
+	private int bhitcount;
 	private String bfileName;
 	private String bsavedName;
 	private String bfileType;

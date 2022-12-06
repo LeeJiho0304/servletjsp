@@ -34,7 +34,6 @@ public class WriteController extends HttpServlet {
 		board.setBtitle(request.getParameter("btitle"));
 		board.setBcontent(request.getParameter("bcontent"));
 		board.setBwriter(request.getParameter("bwriter"));
-		boardService.write2(board);
 		
 		//파일 파트
 		Part filePart = request.getPart("battach");
@@ -43,6 +42,10 @@ public class WriteController extends HttpServlet {
 			String savedName = new Date().getTime() + "-" + fileName;
 			String fileType = filePart.getContentType();
 			
+			System.out.println(fileName);
+			System.out.println(savedName);
+			System.out.println(fileType);
+			
 			board.setBfileName(fileName);
 			board.setBsavedName(savedName);
 			board.setBfileType(fileType);
@@ -50,7 +53,7 @@ public class WriteController extends HttpServlet {
 			String filePath = "C:/Temp/download/" + savedName;  //실제 저장되는 경로
 			filePart.write(filePath);
 		}
-		boardService.write(board);
+		boardService.write2(board);
 		
 		response.sendRedirect("ContentController");
 	}
